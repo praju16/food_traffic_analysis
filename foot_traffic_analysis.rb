@@ -31,14 +31,6 @@ class FootTrafficAnalysis
     @rooms[id][:total_time] = 0 if rooms[id][:total_time].nil?
   end
 
-  def find_or_add_room(room_no)
-    room = @rooms.include?(room_no)
-    unless room
-     room = Room.new(index)
-     rooms << room
-    end  
-    room
-  end
 
 end
 
